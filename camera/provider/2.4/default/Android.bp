@@ -172,7 +172,6 @@ cc_defaults {
 cc_binary {
     name: "android.hardware.camera.provider@2.4-service",
     defaults: ["camera_service_defaults"],
-    compile_multilib: "32",
     init_rc: ["android.hardware.camera.provider@2.4-service.rc"],
 }
 
@@ -187,7 +186,6 @@ cc_binary {
     name: "android.hardware.camera.provider@2.4-service-lazy",
     overrides: ["android.hardware.camera.provider@2.4-service"],
     defaults: ["camera_service_defaults"],
-    compile_multilib: "32",
     init_rc: ["android.hardware.camera.provider@2.4-service-lazy.rc"],
     cflags: ["-DLAZY_SERVICE"],
 }
@@ -207,7 +205,6 @@ cc_binary {
     proprietary: true,
     relative_install_path: "hw",
     srcs: ["external-service.cpp"],
-    compile_multilib: "32",
     init_rc: ["android.hardware.camera.provider@2.4-external-service.rc"],
     shared_libs: [
         "android.hardware.camera.common@1.0",
